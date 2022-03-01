@@ -24,18 +24,18 @@ class Maximum {
 public class GenericsTest {
 	public static void main(String[] args) { // main method to find maximum
 		// TODO Auto-generated method stub
-		try(Scanner sc = new Scanner(System.in)){
+		try (Scanner sc = new Scanner(System.in)) {
 			Maximum max = new Maximum();
 			System.out.println("---------Find Maximum-------- ");
 			System.out.print(" Enter the first value: ");
-			Integer first = sc.nextInt();
+			Float first = sc.nextFloat();
 
 			System.out.print(" Enter the second value: ");
-			Integer second = sc.nextInt();
+			Float second = sc.nextFloat();
 
 			System.out.print(" Enter the third value: ");
-			Integer third = sc.nextInt();
-			max.GenMax(first, second, third);	
+			Float third = sc.nextFloat();
+			max.GenMax(first, second, third);
 		}
 
 	}
