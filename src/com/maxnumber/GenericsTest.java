@@ -28,13 +28,13 @@ public class GenericsTest {
 			Maximum max = new Maximum();
 			System.out.println("---------Find Maximum-------- ");
 			System.out.print(" Enter the first value: ");
-			Float first = sc.nextFloat();
+			String first = sc.nextLine();
 
 			System.out.print(" Enter the second value: ");
-			Float second = sc.nextFloat();
+			String second = sc.nextLine();
 
 			System.out.print(" Enter the third value: ");
-			Float third = sc.nextFloat();
+			String third = sc.nextLine();
 			max.GenMax(first, second, third);
 		}
 
