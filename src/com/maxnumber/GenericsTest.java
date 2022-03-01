@@ -23,19 +23,58 @@ class Maximum {
 
 public class GenericsTest {
 	public static void main(String[] args) { // main method to find maximum
-		// TODO Auto-generated method stub
-		try (Scanner sc = new Scanner(System.in)) {
-			Maximum max = new Maximum();
-			System.out.println("---------Find Maximum-------- ");
-			System.out.print(" Enter the first value: ");
-			String first = sc.nextLine();
+		Scanner scan = new Scanner(System.in);
+		Maximum max = new Maximum();
+		while (true) { // asking user to select the generic type
+			System.out.println(" \n 1. Integers\n 2. Float\n 3. String\n 4. Exit");
+			System.out.print(" Please enter your choise from above:  \n ");
+			int opt = scan.nextInt();
 
-			System.out.print(" Enter the second value: ");
-			String second = sc.nextLine();
+			switch (opt) { // taking input from user
+			case 1: {
+				System.out.print(" Enter the first value: ");
+				Integer first = scan.nextInt();
 
-			System.out.print(" Enter the third value: ");
-			String third = sc.nextLine();
-			max.GenMax(first, second, third);
+				System.out.print(" Enter the second value: ");
+				Integer second = scan.nextInt();
+
+				System.out.print(" Enter the third value: ");
+				Integer third = scan.nextInt();
+				max.GenMax(first, second, third);
+				break;
+			}
+			case 2: {
+				System.out.print(" Enter the first value: ");
+				Float first = scan.nextFloat();
+
+				System.out.print(" Enter the second value: ");
+				Float second = scan.nextFloat();
+
+				System.out.print(" Enter the third value: ");
+				Float third = scan.nextFloat();
+				max.GenMax(first, second, third);
+				break;
+			}
+			case 3: {
+				System.out.print(" Enter the first value: ");
+				String first = scan.next();
+
+				System.out.print(" Enter the string: ");
+				String second = scan.next();
+
+				System.out.print(" Enter the string: ");
+				String third = scan.next();
+				max.GenMax(first, second, third);
+				break;
+			}
+			case 4:
+				System.out.println(" You have exited from the program!!");
+				scan.close();
+				return;
+			default:
+				System.out.println("Please enter a valid input from above");
+			}
+
 		}
 
 	}
