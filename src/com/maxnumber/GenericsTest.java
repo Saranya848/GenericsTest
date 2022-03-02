@@ -4,9 +4,9 @@ import java.util.*;
 
 class Maximum {
 
-	public <T extends Comparable<T>> void GenMax(T first, T second, T third) { // using generic type T and making the
-																				// method generic.
-		T max = first; // considering first is max and assigning max to first
+	public void GenMax(Integer first, Integer second, Integer third) { // using generic type T and making the
+																		// method generic.
+		Integer max = first; // considering first is max and assigning max to first
 		String position = "first"; // for displaying the position
 		if (second.compareTo(max) > 0) {
 			max = second; // comparing with first max and if greater that assigning to max
@@ -16,27 +16,29 @@ class Maximum {
 			max = third;
 			position = "third";
 		}
-		System.out.println("The maximum number is in " + position + " position and the number is : " + max);
+		displayMax(first, second, third, max);
+
 	}
 
+	private void displayMax(Integer first, Integer second, Integer third, Integer max) {
+		System.out.println("***********To Find Maximum number*********");
+		System.out.println("The Given Values are:- \na = " + first + "\nb = " + second + "\nc = " + third);
+		System.out.println("The maximum number is : " + max);
+	}
 }
 
 public class GenericsTest {
 	public static void main(String[] args) { // main method to find maximum
-		// TODO Auto-generated method stub
-		try(Scanner sc = new Scanner(System.in)){
-			Maximum max = new Maximum();
-			System.out.println("---------Find Maximum-------- ");
-			System.out.print(" Enter the first value: ");
-			Integer first = sc.nextInt();
+		Scanner scan = new Scanner(System.in);
+		Maximum max = new Maximum();
+		System.out.print(" Enter the first value: ");
+		Integer first = scan.nextInt();
 
-			System.out.print(" Enter the second value: ");
-			Integer second = sc.nextInt();
+		System.out.print(" Enter the second value: ");
+		Integer second = scan.nextInt();
 
-			System.out.print(" Enter the third value: ");
-			Integer third = sc.nextInt();
-			max.GenMax(first, second, third);	
-		}
-
+		System.out.print(" Enter the third value: ");
+		Integer third = scan.nextInt();
+		max.GenMax(first, second, third);
 	}
 }
