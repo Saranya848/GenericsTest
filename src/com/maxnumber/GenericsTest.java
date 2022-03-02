@@ -33,7 +33,7 @@ public class GenericsTest {
 
 	// displaying numbers
 	public static void displayMax(Integer first, Integer second, Integer third, Integer max) {
-		System.out.println("***********To Find Maximum number*********");
+		System.out.println("***To Find Maximum number***");
 		System.out.println("The Given Values are:- \na = " + first + "\nb = " + second + "\nc = " + third);
 		System.out.println("The maximum number is : " + max);
 	}
