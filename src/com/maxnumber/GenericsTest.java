@@ -4,8 +4,8 @@ import java.util.*;
 
 class Maximum {
 
-	public void GenMax(Integer first, Integer second, Integer third) { // using generic type T and making the
-																		// method generic.
+	public void GenMax(Integer first, Integer second, Integer third) { 
+										
 		Integer max = first; // considering first is max and assigning max to first
 		String position = "first"; // for displaying the position
 		if (second.compareTo(max) > 0) {
