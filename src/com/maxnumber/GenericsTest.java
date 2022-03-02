@@ -4,39 +4,40 @@ import java.util.*;
 
 class Maximum {
 
-	public <T extends Comparable<T>> void GenMax(T first, T second, T third) { // using generic type T and making the
-																				// method generic.
-		T max = first; // considering first is max and assigning max to first
-		String position = "first"; // for displaying the position
+	public void GenMax(String first, String second, String third) {
+		String max = first; // considering first is max and assigning max to first
 		if (second.compareTo(max) > 0) {
 			max = second; // comparing with first max and if greater that assigning to max
-			position = "second";
 		}
 		if (third.compareTo(max) > 0) { // comparing with max value and if greater that assigning to max
 			max = third;
-			position = "third";
 		}
-		System.out.println("The maximum number is in " + position + " position and the number is : " + max);
+		displayMax(first, second, third, max);
+
 	}
 
+// displaying numbers
+	public void displayMax(String first, String second, String third, String max) {
+		System.out.println("***********To Find Maximum number*********");
+		System.out.println("The Given Values are:- \na = " + first + "\nb = " + second + "\nc = " + third);
+		System.out.println("The maximum number is : " + max);
+	}
 }
 
 public class GenericsTest {
-	public static void main(String[] args) { // main method to find maximum
-		// TODO Auto-generated method stub
-		try (Scanner sc = new Scanner(System.in)) {
-			Maximum max = new Maximum();
-			System.out.println("---------Find Maximum-------- ");
-			System.out.print(" Enter the first value: ");
-			String first = sc.nextLine();
+	public static void main(String[] args) {
+		// User input for String numbers
+		Scanner scan = new Scanner(System.in);
+		Maximum max = new Maximum();
+		System.out.print(" Enter the first String: ");
+		String first = scan.nextLine();
 
-			System.out.print(" Enter the second value: ");
-			String second = sc.nextLine();
+		System.out.print(" Enter the second String: ");
+		String second = scan.nextLine();
 
-			System.out.print(" Enter the third value: ");
-			String third = sc.nextLine();
-			max.GenMax(first, second, third);
-		}
-
+		System.out.print(" Enter the third String: ");
+		String third = scan.nextLine();
+		max.GenMax(first, second, third);
+		scan.close();
 	}
 }
