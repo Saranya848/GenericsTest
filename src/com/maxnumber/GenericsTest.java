@@ -19,7 +19,7 @@ public class GenericsTest {
 	// displaying numbers
 	public static void displayMax(String first, String second, String third, String max) {
 		System.out.println("*****To Find Maximum number******");
-		System.out.println("The Given Values are:- \na = " + first + "\nb = " + second + "\nc = " + third);
+		System.out.println("The User Inputs are:- \na = " + first + "\nb = " + second + "\nc = " + third);
 		System.out.println("The maximum number is : " + max);
 	}
 
